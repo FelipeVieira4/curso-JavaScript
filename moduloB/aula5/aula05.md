@@ -1,6 +1,7 @@
 Criação inicial de variáveis em JavaScript
 
 Construção:
+
 var NomeVariável = Valor;
 
 Exemplo:
