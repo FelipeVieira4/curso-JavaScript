@@ -1,5 +1,2 @@
-alert("Alerta de Olá, Mundo");
-
-confirm("Uma caixa de confirmação");
-
-prompt("Caixa digitar algo");
+var nome = prompt("Qual o seu nome?");
+alert("Olá" + nome);
