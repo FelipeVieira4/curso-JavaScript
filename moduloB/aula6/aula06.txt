@@ -1,0 +1,25 @@
+Concatenação de string
+linguagem = "Java Script";
+
+console.log("Estou estudando "+linguagem);
+
+Mas em JavaScript existe algo chamado Template String então pode ser feito assim
+console.log(`Estou estudando ${linguagem}`);
+
+
+Conversão de tipos:
+  parseInt(tipo: String) return Int
+  parseFloat(tipo: String) return Float
+  Numbar(tipo: String) return Int ou Float(O método decidi qual retornar)
+
+  String(type: Int ou Float) return String
+  variável.toString() return valor formatado para String da variável
+
+Formatação:
+  variável_float.toFixed(3) adiciona três casas depois da virgula
+  variável_float.replace(".",",") alterar de ponto para virgula
+
+  variável_string.toUpperCase() return string em letras maiusculas
+  variável_string.toLowerCase() return string em letras minusculas
+
+  variável_float.toLocaleString("pt-BR",{style: "currency",currency:"BRL"}); converter para moeda Real

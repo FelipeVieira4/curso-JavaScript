@@ -1,2 +1,4 @@
-var nome = prompt("Qual o seu nome?");
-alert("Olá" + nome);
+linguagem = "Java Script";
+
+console.log("Estou estudando "+linguagem);
+console.log(`Estou estudando ${linguagem}`);
