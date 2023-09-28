@@ -1,9 +1,11 @@
 # Aula 7: Operadores
-
+## Tipos de operadores
 + Soma +
 + Subtração -
 + Divisão /
 + Multiplição *
++ Modulo %
++ Exponenciação %
 
 ---
 
