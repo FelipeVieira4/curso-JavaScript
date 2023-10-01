@@ -4,7 +4,9 @@
 
 ## Construção:
 
->var NomeVariável = Valor;
+```javascript
+var NomeVariavel = Valor;
+```
 
 ## Exemplos
 
