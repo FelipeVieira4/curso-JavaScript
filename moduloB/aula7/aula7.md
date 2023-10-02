@@ -1,4 +1,6 @@
 # Aula 7: Operadores
+> Tipo de operadores matématicos em JavaScript
+
 ## Tipos de operadores
 + Soma +
 + Subtração -

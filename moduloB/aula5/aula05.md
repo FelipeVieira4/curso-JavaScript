@@ -1,6 +1,6 @@
 # Aula 5
 
-##### >Criação inicial de variáveis em JavaScript
+>Criação inicial de variáveis em JavaScript
 
 ## Construção:
 
