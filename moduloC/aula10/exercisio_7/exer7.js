@@ -1,3 +1,12 @@
+
+const operadores={
+  '+': (num1, num2) => num1 + num2,
+  '-': (num1, num2) => num1 - num2,
+  '*': (num1, num2) => num1 * num2,
+  '/': (num1, num2) => num1 / num2,
+};
+
+//Função para calcular
 const calcular = () =>{
 
   //Pegar valores do HTML
@@ -6,22 +15,10 @@ const calcular = () =>{
   let num2 = Number(document.getElementById("num2").value);
 
   let resul;
-  switch(operador){
-    case "+":
-      resul=num1+num2;
-      break;
-    case "-":
-      resul=num1-num2;
-      break;
-    case "*":
-      resul=num1*num2;
-      break;
-    case "/":
-      resul=num1/num2;
-      break;
-    default:
-      alert("Operador não definido");
-      resul="Sem operador";
+  if(operadores.hasOwnProperty(operador)){
+    resul=operadores[operador](num1,num2);
+  }else{
+    resul="Sem operador";
   }
 
   document.getElementById("res").value=resul.toString();
