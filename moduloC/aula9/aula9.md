@@ -16,11 +16,11 @@ var componentByTagName = document.getElementsByTagName("TagName");
 ```
 como mais de uma componente pode ter mesma TagName é recomentado utilizar index para buscar o componente correto, sendo assim: 
 ```javascript
-var componentByTagName = document.getElementsByTagName("TagName")[0];
+var componentByTagName = document.getElementsByTagName("TagName")[index];
 ```
 - Classes
 ```javascript
-var componentBySelector = document.getElementsByClassName("Class");
+var componentBySelector = document.getElementsByClassName("Class")[index];
 ```
 
 - QuerySelector
