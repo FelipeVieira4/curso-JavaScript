@@ -4,6 +4,7 @@ const operadores={
   '-': (num1, num2) => num1 - num2,
   '*': (num1, num2) => num1 * num2,
   '/': (num1, num2) => num1 / num2,
+  '%': (num1, num2) => num1 % num2,
 };
 
 //Função para calcular
