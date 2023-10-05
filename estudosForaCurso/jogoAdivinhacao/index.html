@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogo Adivinhação</title>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
   <script src="jogo.js"></script>
 </head>
 
@@ -12,9 +13,10 @@
   <div id="vidas"></div>
 
   <input id="chute" type="number">
-  <button id="chutar" onclick="chutar()">CHUTAR</button>
+  <button id="chutar" onclick="chutarNumero()">CHUTAR</button>
+
+  <button id="temaBotao" onclick="alterarTema()">TEMA</button>
 
   <script>desenharVidas();</script>
-
 </body>
 </html>

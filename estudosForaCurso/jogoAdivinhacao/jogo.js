@@ -1,7 +1,8 @@
 var vidas = 5;
-var valorCorreto=Math.floor(Math.random()*20);
-console.log(valorCorreto);
 var acertos = 0;
+var valorCorreto=Math.floor(Math.random()*10);// de 0 até 10
+console.log(valorCorreto);
+
 
 const desenharVidas = () =>{
   let vidasDiv = document.getElementById("vidas");
@@ -13,16 +14,23 @@ const desenharVidas = () =>{
 }
 
 
-const chutar = () =>{
+const chutarNumero = () =>{
   var valorChute=Number.parseInt(document.getElementById("chute").value);
   
+  if(isNaN(valorChute)){
+    alert("Digite valor validos");
+    return;
+  }
+
   if(valorChute==valorCorreto){
     alert("Parabéns você ganhou!!");
-    valorCorreto=Math.floor(Math.random()*100);
-    console.log(valorCorreto);
-
     acertos++;
+
+    //A cada acerto aumenta "valorCorreto" em 10 números
+    valorCorreto=Math.floor(Math.random()*(10+(acertos*10)));
     vidas=5;
+
+    console.log(valorCorreto);
   }else{
     vidas--;
     if(vidas <= 0){
@@ -34,4 +42,9 @@ const chutar = () =>{
     }
   }
 
+}
+
+
+const alterarTema = () =>{
+  document.body.classList.toggle("dark-mode");
 }
