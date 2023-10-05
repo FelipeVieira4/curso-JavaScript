@@ -31,7 +31,7 @@ const limparCom = () =>{
 }
 
 const chutarNumero = () =>{
-  var valorChute=Number.parseInt(document.getElementById("chute").value);
+  let valorChute=Number.parseInt(document.getElementById("chute").value);
   
   if(isNaN(valorChute) || valorChute > 10+(acertos*10)){
     alert("Digite valores validos");
