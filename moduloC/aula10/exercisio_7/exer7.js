@@ -1,4 +1,3 @@
-
 const operadores={
   '+': (num1, num2) => num1 + num2,
   '-': (num1, num2) => num1 - num2,
@@ -16,6 +15,7 @@ const calcular = () =>{
   let num2 = Number(document.getElementById("num2").value);
 
   let resul;
+
   if(operadores.hasOwnProperty(operador)){
     resul=operadores[operador](num1,num2);
   }else{
