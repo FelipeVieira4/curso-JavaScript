@@ -1,9 +1,14 @@
+/*
+Código JavaScript para jogo de Adivinhação
+Última atualização: 5/10/2023
+*/
+
+// Declaração de Varíaveis
 var vidas = 5;
 var acertos = 0;
 var valorCorreto=Math.floor(Math.random()*10);// de 0 até 10
-console.log(valorCorreto);
 
-
+//Função para rescrever as vidas na página
 const desenharVidas = () =>{
   let vidasDiv = document.getElementById("vidas");
 
@@ -13,15 +18,27 @@ const desenharVidas = () =>{
   }
 }
 
+//Desenha a margen que o valor correto pode ser
+const desenharValorCorreto = () =>{
+  let ranNumeros = document.getElementById("ranNumeros");
+  ranNumeros.textContent = `0 até ${10+(acertos*10)}`;
+}
+
+//Limpar com
+const limparCom = () =>{
+  let comDom=document.getElementById("com");
+  comDom.textContent="";
+}
 
 const chutarNumero = () =>{
   var valorChute=Number.parseInt(document.getElementById("chute").value);
   
-  if(isNaN(valorChute)){
-    alert("Digite valor validos");
+  if(isNaN(valorChute) || valorChute > 10+(acertos*10)){
+    alert("Digite valores validos");
     return;
   }
 
+  
   if(valorChute==valorCorreto){
     alert("Parabéns você ganhou!!");
     acertos++;
@@ -30,21 +47,31 @@ const chutarNumero = () =>{
     valorCorreto=Math.floor(Math.random()*(10+(acertos*10)));
     vidas=5;
 
-    console.log(valorCorreto);
+    document.getElementById("com").textContent="";
+    limparCom();
   }else{
-    vidas--;
-    if(vidas <= 0){
+    vidas--;// Remover uma vida
+
+    if(vidas <= 0){ // Se ficou sem vidas
       alert("Perdeu!!");
       acertos=0;
       vidas=5;
+      limparCom();
     }else{
-      desenharVidas();
+      let com; 
+      let comDom=document.getElementById("com");
+
+      valorChute<valorCorreto?com="<":com=">";
+
+      comDom.textContent+=`${valorChute} ${com} X `;
+      
     }
   }
-
+  desenharVidas();
+  desenharValorCorreto();
 }
 
-
+//Função para alterar o tema
 const alterarTema = () =>{
   document.body.classList.toggle("dark-mode");
 }

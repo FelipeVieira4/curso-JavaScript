@@ -7,3 +7,41 @@ body{
   background-color: black;
   color: white;
 }
+
+#chutar {
+  border-radius: 10px;
+  color: black;
+  background-color: azure;
+  border: 2px solid black;
+  font: bold 10pt Monospace;
+}
+#chutar:hover {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode #chutar {
+  color: white;
+  background-color: black;
+  
+  border: 2px solid green;
+}
+
+.dark-mode #chutar:hover {
+  background-color: green;
+  color: black;
+}
+
+#vidas{
+  padding: 3px 5px;
+  width: 80px;
+  border: 2px solid purple;
+  border-radius: 10px;
+}
+
+#ranNumeros{
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  font: bold 14pt Monospace;
+}
