@@ -19,7 +19,7 @@ const calcular = () =>{
   if(operadores.hasOwnProperty(operador)){
     resul=operadores[operador](num1,num2);
   }else{
-    resul="Sem operador";
+    resul="Operador não definido";
   }
 
   document.getElementById("res").value=resul.toString();
